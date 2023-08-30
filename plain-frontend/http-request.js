@@ -1,6 +1,7 @@
 class TableBuilder {
   constructor(fields) {
-    this.fields = fields; // Array of field names
+    // Array of field names
+    this.fields = fields;
     this.table = document.createElement("table");
     this.createHeader();
     document.getElementById("tableContainer").appendChild(this.table);
@@ -24,7 +25,8 @@ class TableBuilder {
     const tr = document.createElement("tr");
     this.fields.forEach((field) => {
       const td = document.createElement("td");
-      td.textContent = data[field] || ""; // Use an empty string if the field is not present in the data
+      // Use an empty string if the field is not present in the data
+      td.textContent = data[field] || "";
       tr.appendChild(td);
     });
     this.table.appendChild(tr);

@@ -73,7 +73,6 @@ Für eine vollständige Liste der HTTP-Statuscodes, siehe [Wikipedia: HTTP-Statu
 
 *für die ausführung wird eine standard mongodb installation erwartet*
 
-**Swagger Beispiel**
 ```bash
 npx create-nodejs-express-app restful
 ```
