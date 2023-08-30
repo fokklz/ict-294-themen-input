@@ -18,11 +18,11 @@ URLs (**Uniform Resource Locators**) dienen im Internet als Adressen für Ressou
 
 In RESTful APIs werden URLs verwendet, um spezifische Ressourcen zu identifizieren. Diese Ressourcen können dann durch verschiedene HTTP-Methoden manipuliert werden. Ein Endpunkt ist eine spezielle URL, die einen bestimmten Aspekt einer Ressource oder eine Gruppe von Ressourcen repräsentiert.
 
-## Beispiele für REST-Endpunkte:
+### Beispiele für REST-Endpunkte:
 
 **GET** `/books`: Liste aller Bücher abrufen<br />
-**GET** `/books/1`: Einzelnes Buch mit ID 1 abrufen<br />
 **POST** `/books`: Neues Buch hinzufügen<br />
+**GET** `/books/1`: Einzelnes Buch mit ID 1 abrufen<br />
 **PUT** `/books/1`: Buch mit ID 1 aktualisieren<br />
 **DELETE** `/books/1`: Buch mit ID 1 löschen<br />
 
@@ -37,7 +37,19 @@ HTTP-Methoden in RESTful APIs fungieren als standardisierte Verben für die Inte
 
 ## HTTP-Statuscodes
 
-HTTP-Statuscodes sind dreistellige Codes, die vom Server zurückgegeben werden, um den Status einer HTTP-Anfrage anzuzeigen. Sie informieren den Client darüber, ob die Anfrage erfolgreich war, ob weitere Aktionen erforderlich sind oder ob ein Fehler aufgetreten ist.
+HTTP-Statuscodes sind dreistellige Codes, die vom Server zurückgegeben werden, um den Status einer HTTP-Anfrage anzuzeigen. Sie informieren den Client darüber, ob die Anfrage erfolgreich war, ob weitere Aktionen erforderlich sind oder ob ein Fehler aufgetreten ist. Sie sind in verschiedene Bereiche unterteilt, um die Art der Antwort zu kennzeichnen.
+
+### HTTP-Statuscode-Bereiche
+
+| Bereich | Beschreibung                                                                                  |
+| ------- | --------------------------------------------------------------------------------------------- |
+| 1xx     | Informational - Anfrage wurde empfangen und verarbeitet                                       |
+| 2xx     | Erfolgreich - Anfrage wurde erfolgreich empfangen, verstanden und akzeptiert                  |
+| 3xx     | Umleitung - Weiterleitung erforderlich, um die Anfrage abzuschließen                          |
+| 4xx     | Client-Fehler - Anfrage enthält einen ungültigen Parameter oder kann nicht verarbeitet werden |
+| 5xx     | Server-Fehler - Server konnte die Anfrage nicht verarbeiten                                   |
+
+
 
 ### Häufige HTTP-Statuscodes
 
@@ -54,4 +66,14 @@ HTTP-Statuscodes sind dreistellige Codes, die vom Server zurückgegeben werden, 
 | 502    | Bad Gateway           |
 | 503    | Service Unavailable   |
 
-Für eine vollständige Liste der HTTP-Statuscodes, siehe [Wikipedia](https://de.wikipedia.org/wiki/HTTP-Statuscode).
+Für eine vollständige Liste der HTTP-Statuscodes, siehe [Wikipedia: HTTP-Statuscode](https://de.wikipedia.org/wiki/HTTP-Statuscode).
+
+
+## Code Beispiel und Demo
+
+*für die ausführung wird eine standard mongodb installation erwartet*
+
+**Swagger Beispiel**
+```bash
+npx create-nodejs-express-app restful
+```
