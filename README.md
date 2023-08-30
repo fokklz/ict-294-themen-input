@@ -32,7 +32,7 @@ HTTP-Methoden in RESTful APIs fungieren als standardisierte Verben für die Inte
 
 - GET: **Daten abrufen**
 - POST: **Daten hinzufügen**
-- PUT: **Daten aktualisieren**
+- PUT/PATCH: **Daten aktualisieren**
 - DELETE: **Daten löschen**
 
 ## HTTP-Statuscodes
